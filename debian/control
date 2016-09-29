@@ -35,7 +35,8 @@ Description: GPG for Gmail - Chrome browser plugin
  Goopg is a an extension for Gmail which allows one to verify and sign
  emails in Gmail web page.
  .
- This package installs the plugin for the Chrome browser
+ This package installs the plugin for the Chrome browser. The Chrome
+ 'goopg' Extension is also required, available in the Chrome store.
 
 Package: goopg-chromium
 Architecture: all
@@ -44,4 +45,5 @@ Description: GPG for Gmail - Chromium browser plugin
  Goopg is a an extension for Gmail which allows one to verify and sign
  emails in Gmail web page.
  .
- This package installs the plugin for the Chromium browser
+ This package installs the plugin for the Chromium browser. The Chrome
+ 'goopg' Extension is also required, available in the Chrome store.
