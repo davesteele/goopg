@@ -1,0 +1,3 @@
+version=3
+
+https://github.com/LeoIannacone/goopg/tags .*archive/v?(\d\S*)\.tar\.gz
