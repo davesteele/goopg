@@ -1,5 +1,5 @@
 Source: goopg
-Section: python
+Section: mail
 Priority: extra
 Maintainer: Leo Iannacone <l3on@ubuntu.com>
 Uploaders: David Steele <steele@debian.org>
@@ -30,6 +30,7 @@ Description: GPG for Gmail - common files
  This package contains the common files
 
 Package: goopg-chrome
+Section: contrib/mail
 Architecture: all
 Depends: goopg-common (= ${binary:Version}), ${misc:Depends}
 Description: GPG for Gmail - Chrome browser plugin
