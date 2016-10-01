@@ -1,3 +1,9 @@
+goopg (0.3.1-1) unstable; urgency=low
+
+  * Initial Debian release (Closes: 825820)
+
+ -- David Steele <steele@debian.org>  Sat, 01 Oct 2016 18:21:00 -0400
+
 goopg (0.3.1) UNRELEASED; urgency=medium
 
   * Fix catching exception.
