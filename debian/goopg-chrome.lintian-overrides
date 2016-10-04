@@ -1,0 +1,11 @@
+# lintian emits the 'serious' issue 'dir-or-file-in-etc-opt' for this 'contrib'
+# package, due to a configuration file installed under /etc/opt. The 3rd-party
+# google-chrome-* package requires that the file be stored there.
+#
+# Concerning opt, the Debian Policy says only that the FHS be followed.
+# With exceptions outside of this discussion, the FHS states that
+# distributions may install to opt. There is an FHS requirement that file
+# modifications require the assent of the local system adminstrator, which this
+# package satisfies.
+
+dir-or-file-in-etc-opt
