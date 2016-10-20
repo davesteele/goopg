@@ -29,17 +29,6 @@ Description: GPG for Gmail - common files
  .
  This package contains the common files
 
-Package: goopg-chrome
-Section: contrib/mail
-Architecture: all
-Depends: goopg-common (= ${binary:Version}), ${misc:Depends}
-Description: GPG for Gmail - Chrome browser plugin
- Goopg is a an extension for Gmail which allows one to verify and sign
- emails in Gmail web page.
- .
- This package installs the plugin for the Chrome browser. The Chrome
- 'goopg' Extension is also required, available in the Chrome store.
-
 Package: goopg-chromium
 Architecture: all
 Depends: goopg-common (= ${binary:Version}), ${misc:Depends}
