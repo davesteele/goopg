@@ -1,1 +1,3 @@
+host/*.py usr/share/goopg/
+host/gmail usr/share/goopg/
 debian/com.leoiannacone.goopg.json etc/chromium/native-messaging-hosts/
