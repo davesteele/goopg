@@ -13,8 +13,7 @@ Vcs-Browser: https://github.com/davesteele/goopg
 
 Package: goopg
 Architecture: all
-Depends: chromium,
-         python,
+Depends: python,
          python-gflags,
          python-gnupg,
          python-googleapi,
@@ -23,6 +22,8 @@ Depends: chromium,
          gnupg-agent,
          gnupg2,
          ${misc:Depends}
+Recommends: chromium
+Suggests: google-chrome-stable
 Description: GPG for Chromium Gmail
  Goopg is a Chromium Native Messaging Host utility for Gmail. It allows
  one to verify and sign emails in Gmail web page, using GnuPG. The Chrome

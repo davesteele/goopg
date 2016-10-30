@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -e
+
+check_config() {
+    trigger=$1
+    cfg_dir=$2
+    dest_dir=$cfg_dir/native-messaging-hosts
+
+    if [ -e $trigger ] ; then
+        install -d $dest_dir
+        install /usr/share/goopg/conf/com.leoiannacone.goopg.json $dest_dir
+    else
+        rm -f $dest_dir/com.leoiannacone.goopg.json 2> /dev/null
+	rmdir $dest_dir 2> /dev/null || true
+	rmdir $cfg_dir 2> /dev/null || true
+    fi
+}
+
+case "$1" in
+    triggered|configure)
+        check_config /usr/bin/chromium /etc/chromium
+        check_config /opt/google/chrome /etc/opt/chrome
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

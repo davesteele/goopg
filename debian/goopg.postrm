@@ -1,0 +1,30 @@
+set -e
+
+rm_config() {
+    cfg_dir=$1
+    nmh_dir=$cfg_dir/native-messaging-hosts
+    cfg_file=$nmh_dir/com.leoiannacone.goopg.json
+
+    rm -f $cfg_file 2> /dev/null
+    rmdir $nmh_dir 2> /dev/null || /bin/true
+    rmdir $cfg_dir 2> /dev/null || /bin/true
+}
+
+case "$1" in
+    remove|purge|disappear|abort-install)
+        rm_config '/etc/chromium'
+        rm_config '/etc/opt/chrome'
+    ;;
+
+    upgrade|failed-upgrade|abort-upgrade)
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
