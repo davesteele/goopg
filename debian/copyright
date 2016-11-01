@@ -2,9 +2,23 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: goopg
 Upstream-Contact: Leo Iannacone <info@leoiannacone.com>
 Source: https://github.com/LeoIannacone/goopg
+Comment: This capability requires that the goopg Chromium/Chrome
+ extension be installed. The code for the extension is included in
+ the source repository, and is covered by the copyright declaration.
 
 Files: *
 Copyright: 2014 Leo Iannacone <info@leoiannacone.com>
+Comment: The copyright declaration is made in this copyright file,
+ created upstream by the author. DS
+License: GPL-3+
+
+Files: debian/gbp.conf
+       debian/goopg.install
+       debian/upstream/*
+       debian/watch
+Copyright: 2016 David Steele <steele@debian.org>
+License: GPL-3+
+
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

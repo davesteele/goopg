@@ -1,3 +1,10 @@
+goopg (0.3.1-2) unstable; urgency=medium
+
+  * Clarify copyright statement in the copyright file
+  * Initial Debian release (Closes: 825820)
+
+ -- David Steele <steele@debian.org>  Tue, 01 Nov 2016 15:40:46 -0400
+
 goopg (0.3.1-1) unstable; urgency=low
 
   * Initial Debian release (Closes: 825820)
