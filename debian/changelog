@@ -1,3 +1,9 @@
+goopg (0.3.1-3) unstable; urgency=medium
+
+  * Use triggers to install the Chromium/Chrome config file.
+
+ -- David Steele <steele@debian.org>  Wed, 09 Nov 2016 20:12:38 -0500
+
 goopg (0.3.1-2) unstable; urgency=medium
 
   * Clarify copyright statement in the copyright file
