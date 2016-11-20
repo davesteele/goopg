@@ -12,9 +12,9 @@ Extension is also required.</p>
 </description>
 <url type="homepage">http://leoiannacone.github.io/goopg/</url>
 <url type="bugtracker">https://github.com/LeoIannacone/goopg/issues</url>
-<provides>
-    <binary>goopg</binary>
-</provides>
+<mimetypes>
+    <mimetype>message/rfc822</mimetype>
+</mimetypes>
 <project_license>GPL-3+</project_license>
 <developer_name>Leo Iannacone</developer_name>
 <update_contact>info@leoiannacone.com</update_contact>
