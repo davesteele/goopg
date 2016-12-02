@@ -1,3 +1,9 @@
+goopg (0.3.1-5) unstable; urgency=medium
+
+  * Updated appstream data.
+
+ -- David Steele <steele@debian.org>  Thu, 01 Dec 2016 20:31:50 -0500
+
 goopg (0.3.1-4) unstable; urgency=medium
 
   * Add author as uploader.

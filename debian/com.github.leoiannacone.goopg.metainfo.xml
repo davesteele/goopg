@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016 David Steele <dsteele@gmail.com> -->
+<component type="addon">
+  <id>com.github.leoiannacone.goopg</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Goopg</name>
+  <summary>GPG for Chromium GMail</summary>
+  <description>
+  <p>Goopg is a Chromium Native Messaging Host utility for GMail. it allows one
+  to verify and sign emails in a GMail web page, using GnuPG. The Chrome 'goopg'
+  Extension is also required.</p>
+  </description>
+  <extends>google-chrome.desktop</extends>
+  <extends>chromium.desktop</extends>
+  <extends>google-chrome</extends>
+  <extends>chromium</extends>
+  <url type="homepage">http://leoiannacone.github.io/goopg/</url>
+  <url type="bugtracker">https://github.com/LeoIannacone/goopg/issues</url>
+  <mimetypes>
+    <mimetype>message/rfc822</mimetype>
+  </mimetypes>
+  <project_license>GPL-3+</project_license>
+  <developer_name>Leo Iannacone</developer_name>
+  <update_contact>dsteele@debian.org</update_contact>
+  <icon type="remote">https://raw.githubusercontent.com/LeoIannacone/goopg/gh-pages/images/icon96.png</icon>
+  <screenshots>
+    <screenshot type="default">
+      <image>http://leoiannacone.github.io/goopg/images/preview.png</image>
+      <caption>Work with signed email in GMail</caption>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <!-- Get timestamp with 'date +%s' -->
+    <release version="0.3.1" timestamp="1472201100"></release>
+  </releases>
+  <categories>
+    <category>Network</category>
+    <category>Office</category>
+    <category>Email</category>
+  </categories>
+  <keywords>
+    <keyword>mail</keyword>
+    <keyword>email</keyword>
+    <keyword>gmail</keyword>
+  </keywords>
+</component>

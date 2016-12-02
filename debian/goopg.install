@@ -1,4 +1,4 @@
 host/*.py usr/share/goopg/
 host/gmail usr/share/goopg/
 debian/com.leoiannacone.goopg.json usr/share/goopg/conf/
-debian/com.github.leoiannacone.goopg.appdata.xml /usr/share/appdata/
+debian/com.github.leoiannacone.goopg.metainfo.xml /usr/share/metainfo/
