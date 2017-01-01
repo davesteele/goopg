@@ -21,7 +21,7 @@
   </mimetypes>
   <project_license>GPL-3+</project_license>
   <developer_name>Leo Iannacone</developer_name>
-  <update_contact>dsteele@debian.org</update_contact>
+  <update_contact>steele@debian.org</update_contact>
   <icon type="remote">https://raw.githubusercontent.com/LeoIannacone/goopg/gh-pages/images/icon96.png</icon>
   <screenshots>
     <screenshot type="default">
