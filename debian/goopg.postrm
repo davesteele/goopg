@@ -8,8 +8,8 @@ rm_config() {
     cfg_file=$nmh_dir/com.leoiannacone.goopg.json
 
     rm -f $cfg_file 2> /dev/null
-    rmdir $nmh_dir 2> /dev/null || /bin/true
-    rmdir $cfg_dir 2> /dev/null || /bin/true
+    rmdir $nmh_dir 2> /dev/null || true
+    rmdir $cfg_dir 2> /dev/null || true
 }
 
 case "$1" in
