@@ -7,6 +7,7 @@ Build-Depends: debhelper (>= 9),
                dh-buildinfo,
                dh-python,
                python | python-all | python-dev | python-all-dev
+Testsuite: autopkgtest
 Standards-Version: 3.9.8
 Homepage: http://leoiannacone.github.io/goopg/
 Vcs-Git: https://github.com/davesteele/goopg.git -b debian

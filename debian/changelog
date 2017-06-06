@@ -1,6 +1,7 @@
 goopg (0.3.1-6) UNRELEASED; urgency=medium
 
   * Add shebangs to all install scripts (Closes: 862683).
+  * Implement debci CI test
 
  -- David Steele <steele@debian.org>  Mon, 15 May 2017 21:52:22 -0400
 
