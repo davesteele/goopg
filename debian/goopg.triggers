@@ -1,2 +1,2 @@
-interest /usr/bin/chromium
-interest /opt/google/chrome
+interest-noawait /usr/bin/chromium
+interest-noawait /opt/google/chrome
