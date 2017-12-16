@@ -15,15 +15,15 @@ X-Python3-Version: >= 3.5
 
 Package: goopg
 Architecture: all
-Depends: python3:any,
-         python3-gflags,
+Depends: python3-gflags,
          python3-gnupg,
          python3-googleapi,
          python3-oauth2client (>= 2.0.1-1),
          python3-xdg,
          gnupg-agent,
          gnupg2,
-         ${misc:Depends}
+         ${misc:Depends},
+         ${python3:Depends},
 Recommends: chromium
 Suggests: google-chrome-stable
 Description: GPG for Chromium GMail
