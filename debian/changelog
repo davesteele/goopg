@@ -1,3 +1,9 @@
+goopg (0.3.1-8) unstable; urgency=medium
+
+  * Fix autopkgtest for python3.
+
+ -- David Steele <steele@debian.org>  Sun, 17 Dec 2017 21:25:38 -0500
+
 goopg (0.3.1-7) unstable; urgency=medium
 
   * Update to python3.
