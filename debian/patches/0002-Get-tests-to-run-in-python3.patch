@@ -1,0 +1,81 @@
+From: David Steele <steele@debian.org>
+Date: Sun, 17 Dec 2017 20:50:55 -0500
+Subject: Get tests to run in python3
+
+---
+ host/gmail/__init__.py    | 4 ++--
+ host/tests/__init__.py    | 0
+ host/tests/gmail.tests.py | 6 +++++-
+ 3 files changed, 7 insertions(+), 3 deletions(-)
+ create mode 100644 host/tests/__init__.py
+
+diff --git a/host/gmail/__init__.py b/host/gmail/__init__.py
+index de8d457..5396199 100644
+--- a/host/gmail/__init__.py
++++ b/host/gmail/__init__.py
+@@ -219,7 +219,7 @@ class Gmail():
+         Return a new message (str) without the Bcc field
+         """
+ 
+-        if not isinstance(message, (str, unicode)):
++        if not isinstance(message, str):
+             message = message.as_string()
+ 
+         # split the message in header and body
+@@ -245,7 +245,7 @@ class Gmail():
+ 
+     def send(self, id, message, delete_draft=True):
+ 
+-        if isinstance(message, (str, unicode)):
++        if isinstance(message, str):
+             msg_str = message
+             message = email.message_from_string(message)
+         else:
+diff --git a/host/tests/__init__.py b/host/tests/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/host/tests/gmail.tests.py b/host/tests/gmail.tests.py
+index 1e000f6..0d75f6a 100644
+--- a/host/tests/gmail.tests.py
++++ b/host/tests/gmail.tests.py
+@@ -11,7 +11,7 @@ from email.mime.text import MIMEText
+ current = os.path.dirname(os.path.abspath(__file__))
+ sys.path.append(os.path.join(current, '..'))
+ 
+-from gmail import Gmail
++#from gmail import Gmail
+ 
+ 
+ class gmail_tests(unittest.TestCase):
+@@ -35,6 +35,7 @@ class gmail_tests(unittest.TestCase):
+         my_receivers = ', '.join([to, Cc, Bcc]).split(',')
+         my_addresses = email.utils.getaddresses(my_receivers)
+ 
++        from gmail import Gmail
+         addresses = Gmail._get_receivers(m)
+         for name, addr in my_addresses:
+             self.assertIn(addr, addresses)
+@@ -55,6 +56,7 @@ class gmail_tests(unittest.TestCase):
+         m['Bcc'] = Bcc
+         m['From'] = my_sender
+ 
++        from gmail import Gmail
+         new_message = Gmail._remove_bcc_from_header(m)
+ 
+         # message must be a correct email (parsable)
+@@ -77,6 +79,7 @@ class gmail_tests(unittest.TestCase):
+         m = MIMEText(payload)
+         m['To'] = to
+         m['From'] = my_sender
++        from gmail import Gmail
+         addr = Gmail._get_receivers(m)
+         self.assertIn("leo3@tests.com", addr)
+         self.assertIn("leo@tests.com", addr)
+@@ -91,6 +94,7 @@ class gmail_tests(unittest.TestCase):
+         m = MIMEText(payload)
+         m['To'] = to
+         m['From'] = my_sender
++        from gmail import Gmail
+         addr = Gmail._get_receivers(m)
+         self.assertEqual(1, len(addr))
+         self.assertIn("leo@tests.com", addr)
