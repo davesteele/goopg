@@ -1,4 +1,0 @@
-#!/bin/bash
-
-python2 ./host/tests/gmail.tests.py -v 2>&1
-
