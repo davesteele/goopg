@@ -1,0 +1,21 @@
+From: David Steele <steele@debian.org>
+Date: Sat, 3 Feb 2018 15:39:02 -0500
+Subject: Gpg2 is the default now
+
+---
+ host/gpgmail.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/host/gpgmail.py b/host/gpgmail.py
+index 1166e88..c47f369 100644
+--- a/host/gpgmail.py
++++ b/host/gpgmail.py
+@@ -18,7 +18,7 @@ class GPGMail(object):
+         if gpg:
+             self.gpg = gpg
+         else:
+-            self.gpg = GPG(gpgbinary="gpg2", use_agent=True)
++            self.gpg = GPG(gpgbinary="gpg", use_agent=True)
+ 
+         GPGLogger.setLevel(logging.DEBUG)
+ 

@@ -21,7 +21,7 @@ Depends: python3-gflags,
          python3-oauth2client (>= 2.0.1-1),
          python3-xdg,
          gnupg-agent,
-         gnupg2,
+         gpg (>= 2.1),
          ${misc:Depends},
          ${python3:Depends},
 Recommends: chromium
