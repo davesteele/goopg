@@ -1,0 +1,21 @@
+From: David Steele <steele@debian.org>
+Date: Sun, 25 Feb 2018 20:57:34 -0500
+Subject: Update StringIO import for Python 3
+
+---
+ host/gpgmail.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/host/gpgmail.py b/host/gpgmail.py
+index c47f369..dfd1fca 100644
+--- a/host/gpgmail.py
++++ b/host/gpgmail.py
+@@ -1,7 +1,7 @@
+ import re
+ import email
+ 
+-from cStringIO import StringIO
++from io import StringIO
+ from email.generator import Generator
+ from email.message import Message
+ from email.mime.multipart import MIMEMultipart
