@@ -1,3 +1,9 @@
+goopg (0.3.1-9) UNRELEASED; urgency=medium
+
+  * Critical Python 3 fixes.
+
+ -- David Steele <steele@debian.org>  Sun, 25 Feb 2018 21:47:17 -0500
+
 goopg (0.3.1-8) unstable; urgency=medium
 
   * Fix autopkgtest for python3.
