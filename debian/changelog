@@ -1,3 +1,10 @@
+goopg (0.3.1-9) unstable; urgency=medium
+
+  * Revert python 3 changes.
+  * Refer to gpg2 as gpg
+
+ -- David Steele <steele@debian.org>  Mon, 26 Feb 2018 01:18:24 -0500
+
 goopg (0.3.1-8) unstable; urgency=medium
 
   * Fix autopkgtest for python3.
