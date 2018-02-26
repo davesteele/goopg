@@ -1,0 +1,28 @@
+From: David Steele <steele@debian.org>
+Date: Sun, 25 Feb 2018 21:43:27 -0500
+Subject: Interpret exception strings per Python 3
+
+---
+ host/chrome-main.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/host/chrome-main.py b/host/chrome-main.py
+index eada9a8..85d99d5 100755
+--- a/host/chrome-main.py
++++ b/host/chrome-main.py
+@@ -45,7 +45,7 @@ def main():
+             bundle = read_bundle()
+         except struct.error as e:
+             logger.error("Error while reading stdin: \"{}\""
+-                         " - Exit.".format(e.message))
++                         " - Exit.".format(e))
+             sys.exit(1)
+         if not handler.initialized and bundle['command'] != 'init':
+             # send init request
+@@ -71,5 +71,5 @@ if __name__ == '__main__':
+     try:
+         main()
+     except Exception as e:
+-        logger.error("General error: {}".format(e.message))
++        logger.error("General error: {}".format(e))
+     sys.exit(0)

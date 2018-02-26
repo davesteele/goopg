@@ -2,3 +2,5 @@
 0002-Get-tests-to-run-in-python3.patch
 0003-Gpg2-is-the-default-now.patch
 0004-Update-StringIO-import-for-Python-3.patch
+0005-Interpret-exception-strings-per-Python-3.patch
+0006-Read-stdin-as-bytes-per-Python-3.patch

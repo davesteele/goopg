@@ -1,0 +1,28 @@
+From: David Steele <steele@debian.org>
+Date: Sun, 25 Feb 2018 21:45:11 -0500
+Subject: Read stdin as bytes per Python 3
+
+---
+ host/chrome-main.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/host/chrome-main.py b/host/chrome-main.py
+index 85d99d5..2cd20ee 100755
+--- a/host/chrome-main.py
++++ b/host/chrome-main.py
+@@ -23,13 +23,13 @@ def send_bundle(bundle):
+ def read_bundle():
+     """Helper that reads bundles from the webapp."""
+     # Read the bundle length (first 4 bytes).
+-    text_length_bytes = sys.stdin.read(4)
++    text_length_bytes = sys.stdin.buffer.read(4)
+ 
+     # Unpack bundle length as 4 byte integer.
+     text_length = struct.unpack('i', text_length_bytes)[0]
+ 
+     # Read the text (JSON object) of the bundle.
+-    raw_text = sys.stdin.read(text_length).decode('utf-8')
++    raw_text = sys.stdin.buffer.read(text_length).decode('utf-8')
+     return json.loads(raw_text)
+ 
+ 
