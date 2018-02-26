@@ -21,7 +21,7 @@ Depends: python-gflags,
          gnupg-agent,
          gpg (>= 2.1),
          ${misc:Depends},
-         ${python3:Depends},
+         ${python:Depends},
 Recommends: chromium
 Suggests: google-chrome-stable
 Description: GPG for Chromium GMail
