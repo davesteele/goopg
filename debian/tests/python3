@@ -1,6 +1,0 @@
-#!/bin/bash
-
-set -e 
-
-(cd host; python3 ./tests/gmail.tests.py 2>&1)
-
