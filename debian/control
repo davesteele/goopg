@@ -1,7 +1,7 @@
 Source: goopg
 Section: mail
 Priority: optional
-Standards-Version: 4.1.3
+Standards-Version: 4.1.4
 Maintainer: David Steele <steele@debian.org>
 Uploaders: Leo Iannacone <l3on@ubuntu.com>
 Build-Depends: debhelper (>= 9),
