@@ -19,7 +19,7 @@
   <mimetypes>
     <mimetype>message/rfc822</mimetype>
   </mimetypes>
-  <project_license>GPL-3+</project_license>
+  <project_license>GPL-3.0-or-later</project_license>
   <developer_name>Leo Iannacone</developer_name>
   <update_contact>steele@debian.org</update_contact>
   <icon type="remote">https://raw.githubusercontent.com/LeoIannacone/goopg/gh-pages/images/icon96.png</icon>
