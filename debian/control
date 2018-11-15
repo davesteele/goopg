@@ -25,6 +25,7 @@ Depends: python-gflags,
          ${python:Depends},
 Recommends: chromium
 Suggests: google-chrome-stable
+Conflicts: goopg-common, goopg-chrome, goopg-chromium
 Description: GPG for Chromium GMail
  Goopg is a Chromium Native Messaging Host utility for GMail. It allows
  one to verify and sign emails in GMail web page, using GnuPG. The Chrome
