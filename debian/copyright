@@ -19,7 +19,7 @@ Files: debian/gbp.conf
 Copyright: 2016 David Steele <steele@debian.org>
 License: GPL-3+
 
-Files: debian/com.github.leoiannacone.goopg.appdata.xml
+Files: debian/com.github.leoiannacone.goopg.metainfo.xml
 Copyright: 2016 David Steele <steele@debian.org>
 License: CC0-1.0
 
