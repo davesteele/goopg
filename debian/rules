@@ -1,9 +1,6 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
 %:
 	dh $@ --with python2
 
@@ -12,18 +9,9 @@ EXT_ID := ifpoaednafmgolabhpjmbimllaoidelg
 TEMPLATE := templates/com.leoiannacone.goopg.json.in
 OUT := debian/com.leoiannacone.goopg.json
 
-PKD = $(word 1,$(abspath $(dir $(MAKEFILE_LIST))))
-PKG = $(shell dpkg-parsechangelog -l$(PKD)/changelog --show-field=Source)
-VER ?= $(shell (dpkg-parsechangelog -l$(PKD)/changelog | grep Version | sed 's/Version..//' | sed 's/-.\+//'))
-
 override_dh_auto_build:
 	sed -e "s|@HOST_PATH@|$(HOST_PATH)|" -e "s|@EXT_ID@|$(EXT_ID)|" $(TEMPLATE) > $(OUT)
 
 override_dh_auto_clean:
 	make -C app/lib/ clean
 	rm -f $(OUT) app/goopg-web-extension-id.js `find -name *.pyc`
-
-.PHONY get-orig-source:
-get-orig-source:  $(info I: $(PKG)_$(VER))
-	@echo "# Downloading..."
-	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
